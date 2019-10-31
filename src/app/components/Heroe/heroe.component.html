@@ -1,0 +1,29 @@
+
+<h1 class="mt-3 ml-5 animated fadeIn fast" >{{ heroe.nombre | uppercase }}</h1>
+<hr>
+
+<div class="container">
+        <div class="row animated fadeIn">
+                <div class="col-md-4">
+                    <figure>
+                        <img [src]="heroe.img" class="img-fluid" alt="">
+                    </figure>
+                    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+                </div>
+            
+                <div class="col-md-8">
+                    <h2 class="h3">{{ heroe.nombre }}</h2> 
+                    <blockquote>Primera aparición en el año: {{ heroe.aparicion | date: 'y' }}</blockquote>
+                    <hr>
+            
+                    <p>
+                        {{ heroe.bio }}
+                    </p>
+                    <div>
+                        <figure class="">
+                            <img [src]="casa" class="img-fluid" style="max-width: 50%" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+</div>

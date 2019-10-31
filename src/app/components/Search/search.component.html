@@ -1,0 +1,11 @@
+<h1 class="ml-3 mt-3">Buscando: <small class="h4">{{ terminoBuscado }}</small></h1> 
+<hr>
+
+<div class="container mt-4 ">
+    <div *ngIf="this.mostrarHeroe.length === 0" class="alert alert-danger animated fadeIn" role="alert">
+        No se encontraron resultados con el termino {{ terminoBuscado }}.
+    </div>
+    <div class="card-columns">
+        <app-heroe-tarjeta [heroe]="heroe" [Index]="heroe.id"  *ngFor="let heroe of mostrarHeroe;"></app-heroe-tarjeta>
+    </div>
+  </div>
